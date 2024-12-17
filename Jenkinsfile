@@ -3,10 +3,10 @@ pipeline {
     agent any
 
     environment {
-      REGISTRY = "373610515267.dkr.ecr.eu-west-1.amazonaws.com/cicd-ecr"
+      REGISTRY = "772004002961.dkr.ecr.eu-west-1.amazonaws.com/grp_04/cicdecr"
       AWS_DEFAULT_REGION = "eu-west-1"
-      AWS_ACCOUNT_ID = "373610515267"
-      IMAGE_REPO_NAME = "cicd-ecr"
+      AWS_ACCOUNT_ID = "772004002961"
+      IMAGE_REPO_NAME = "cicdecr"
     }
     
    tools {
@@ -16,7 +16,8 @@ pipeline {
     stages {
         stage('Step 1 - Cloning the project') {
             steps {
-                git branch: 'main', url: 'https://github.com/oadya/ci-cd-pipeline.git'
+                git branch: 'feature/ci-cd-jenkinstp', url: 'https://github.com/Bechir165/ci-cd-grp-04.git'
+                                         
             }
         }
         
